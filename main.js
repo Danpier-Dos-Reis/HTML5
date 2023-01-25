@@ -1,13 +1,16 @@
 "use strict";
-const showContent = document.querySelector(".second");
-const hideContent = document.querySelector(".hide");
-function revealContent() {
-    if (showContent === null || showContent === void 0 ? void 0 : showContent.classList.contains("second")) {
-        showContent.classList.remove("second");
+//#region  Descending Event Propagation
+const btn = document.querySelector("button");
+const body = document.body;
+function changeBackgroundDirection(element) {
+    if (element.classList.contains("cuerpo")) {
+        element.classList.remove("cuerpo");
     }
     else {
-        showContent === null || showContent === void 0 ? void 0 : showContent.classList.add("second");
+        element.classList.add("cuerpo");
     }
 }
-const btnContent = document.querySelector("button");
-btnContent === null || btnContent === void 0 ? void 0 : btnContent.addEventListener("click", revealContent);
+//No sé  por qué no me dejó pasar la función directamente
+btn === null || btn === void 0 ? void 0 : btn.addEventListener("click", function () { changeBackgroundDirection(body); });
+//#endregion
+//Descending Event Propagation
