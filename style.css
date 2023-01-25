@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    font-family: "Cambria";
+}
+
+body{
+    background: linear-gradient(to left, #1F8A70 , #00425A);
+}
+
+.container{
+    margin: 10rem 0 0 5.8rem;
+    display: flex;
+    border: 4px solid white;
+    border-radius: 6px;
+    width: 73rem;
+    height: 20rem;
+    align-items: center;
+    justify-content: space-around;
+}
+.container div{
+    width: 13rem;
+    height: 15rem;
+    border:2px solid lightblue;
+    display: block;
+    align-content: center;
+}
