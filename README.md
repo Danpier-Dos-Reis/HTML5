@@ -1,7 +1,7 @@
 # HTML5 Knowledges
 Handling Events
 ## Event Propagation
-**Event propagation** es el proceso mediante el cual un evento generado en un elemento de una página web se propaga a través de los diferentes elementos contenedores hasta llegar al elemento raíz (normalmente el DOM).
+**Event propagation** es el proceso mediante el cual un evento generado en un elemento de una página web se propaga a través de los diferentes elementos contenedores hasta llegar al elemento raíz (normalmente el DOCUMENT).
 
 ### Tipos de Propagación
 * ascendente o **bubbling**
