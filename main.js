@@ -5,7 +5,6 @@
 // /*
 // Al dar click al botón pequeño también estamos dando click a otros elementos
 // que se encuentran externos pero que cubren al botón.
-var _a, _b, _c;
 // El orden en que imprime los mensajes o mejor dicho "el orden en que el evento CLICK"
 // recorre los elementos es descendente o "Capturing" porque primero ejecuta el CLICK del
 // Documento hasta llegar al nodo más profundo del arbol (el botón).
@@ -95,30 +94,71 @@ var _a, _b, _c;
 // }, false );
 //#endregion
 //#region Handling  Propagation
+/* Solo usando TRUE
 const buttons = document.getElementsByTagName("button");
 //#region Nota
-/*
-El orden en que imprime los elementos es Bubbling pero al  estar"window" y "container2 (green container)"
-con *true*  se ejecuntan primero estos eventos, luego el Click del botón y luego los otros elementos restantes
-externos al botón.
-*/
+
+// El orden en que imprime los elementos es Bubbling pero al  estar"window" y "container2 (green container)"
+// con *true*  se ejecuntan primero estos eventos, luego el Click del botón y luego los otros elementos restantes
+// externos al botón.
+
 //#endregion
-window.addEventListener("click", () => {
+
+window.addEventListener("click",()=>{
     console.log("Document/Window click event");
-}, true);
-document.addEventListener("click", () => {
+}, true );
+
+document.addEventListener("click",() => {
     console.log("Document click event");
-}, false);
-(_a = document.querySelector(".firstcontainer")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", () => {
-    console.log("Yellow Container");
-}, false);
-(_b = document.querySelector(".container2")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", (element) => {
+}, false );
+
+document.querySelector(".firstcontainer")?.addEventListener("click",() => {
+    console.log("Yellow Container")
+}, false );
+
+document.querySelector(".container2")?.addEventListener("click",(element) => {
     console.log("Green Container");
-}, true);
-(_c = document.querySelector(".firstCard")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
-    console.log("Card Container");
-}, false);
-buttons[1].addEventListener("click", () => {
-    console.log("Little Button Clicked");
-}, false);
+}, true );
+
+document.querySelector(".firstCard")?.addEventListener("click",() => {
+    console.log("Card Container")
+}, false );
+
+buttons[1].addEventListener("click",() => {
+    console.log("Little Button Clicked")
+}, false );
+*/
+//======================================================
+/* Usando Propiedad ONCE
+const buttons = document.getElementsByTagName("button");
+//#region Nota
+    // Al windows tener la propiedad *once* en TRUE su evento CLICK se ejecuta de
+    //último
+//#endregion
+
+window.addEventListener("click",()=>{
+    console.log("Document/Window click event");
+}, {once:true} ); //once es una palabra reservada de JavaScript y se refiere a una propiedad
+
+document.addEventListener("click",() => {
+    console.log("Document click event");
+}, false );
+
+document.querySelector(".firstcontainer")?.addEventListener("click",() => {
+    console.log("Yellow Container")
+}, false );
+
+document.querySelector(".container2")?.addEventListener("click",(element) => {
+    console.log("Green Container");
+}, true );
+
+document.querySelector(".firstCard")?.addEventListener("click",() => {
+    console.log("Card Container")
+}, false );
+
+buttons[1].addEventListener("click",() => {
+    console.log("Little Button Clicked")
+}, false );
+*/
+//======================================================
 //#endregion
