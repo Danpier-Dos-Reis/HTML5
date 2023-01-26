@@ -77,21 +77,57 @@
 //#endregion
 
 //#region  Stop Propagation
+// const buttons = document.getElementsByTagName("button");
+// //#region Nota
+// /*
+// El orden en que imprime los elementos es Bubbling y solo imprime hasta el
+// contenedor verde porque allí ejecuté la función stopPropagation() y los
+// eventos de elementos superiores no se ejecutaron.
+
+// stopPropagation() es súper útil para prevenir que otros elemntos se ejecuten cuando presionamos
+// ejecutamos un evento que está dentro de otro  (flalse = bubbling ; true = capturing)
+// */
+// //#endregion
+
+// window.addEventListener("click",()=>{
+//     console.log("Document/Window click event");
+// }, false );
+
+// document.addEventListener("click",() => {
+//     console.log("Document click event");
+// }, false );
+
+// document.querySelector(".firstcontainer")?.addEventListener("click",() => {
+//     console.log("Yellow Container")
+// }, false );
+
+// document.querySelector(".container2")?.addEventListener("click",(element) => {
+//     console.log("Green Container");
+//     element.stopPropagation();
+// }, false );
+
+// document.querySelector(".firstCard")?.addEventListener("click",() => {
+//     console.log("Card Container")
+// }, false );
+
+// buttons[1].addEventListener("click",() => {
+//     console.log("Little Button Clicked")
+// }, false );
+//#endregion
+
+//#region Handling  Propagation
 const buttons = document.getElementsByTagName("button");
 //#region Nota
 /*
-El orden en que imprime los elementos es Bubbling y solo imprime hasta el
-contenedor verde porque allí ejecuté la función stopPropagation() y los
-eventos de elementos superiores no se ejecutaron.
-
-stopPropagation() es súper útil para prevenir que otros elemntos se ejecuten cuando presionamos
-ejecutamos un evento que está dentro de otro  (flalse = bubbling ; true = capturing)
+El orden en que imprime los elementos es Bubbling pero al  estar"window" y "container2 (green container)"
+con *true*  se ejecuntan primero estos eventos, luego el Click del botón y luego los otros elementos restantes
+externos al botón.
 */
 //#endregion
 
 window.addEventListener("click",()=>{
     console.log("Document/Window click event");
-}, false );
+}, true );
 
 document.addEventListener("click",() => {
     console.log("Document click event");
@@ -103,8 +139,7 @@ document.querySelector(".firstcontainer")?.addEventListener("click",() => {
 
 document.querySelector(".container2")?.addEventListener("click",(element) => {
     console.log("Green Container");
-    element.stopPropagation();
-}, false );
+}, true );
 
 document.querySelector(".firstCard")?.addEventListener("click",() => {
     console.log("Card Container")
@@ -114,5 +149,3 @@ buttons[1].addEventListener("click",() => {
     console.log("Little Button Clicked")
 }, false );
 //#endregion
-
-
