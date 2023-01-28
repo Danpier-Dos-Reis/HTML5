@@ -1,113 +1,56 @@
-html{
-    width: 100%;
-    height: 100%;
-}
-*{
-    margin: 0;
-    font-family: "Cambria Math";
-}
-
+html{ width: 100%;    height: 100%;}
+*{    margin: 0;    font-family: "Cambria Math";}
 body{
-    width: 100%;
     height: 100%;
     background-size: cover;
-    background-image: url(src/pictures/background.png);
+    background-image: url("/src/pictures/Forest.png");
+
+    #principalBTN{
+        margin: 28rem 0 0 8%;
+        background-color: transparent;
+        height: 3rem;
+        width: 18rem;
+        border: 2px solid #03001C;
+        font-size: 22px; font-weight: bold; font-style: italic;
+        text-align: center;
+    }
+}
+#principalBTN:hover{
+    background-color: #301E67;
+    border-radius: 4px;
+    color: #B6EADA;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#alert{
+    position: fixed; /*Establece que un elemento estará posicionado en relación a la ventana del navegador y no a su contenedor padre. Esto significa que aunque el usuario haga scroll en la página, el elemento con "position: fixed" seguirá en la misma posición en la pantalla.*/
+    left: 42%;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-
-    main{
-        border-radius: 5px;
-        display: grid;
-        width: 70%;
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(3 , 7rem);
-    }
-}
-section{
-    font-size: 23.5px;
-    font-style: italic;
+    width: 12em;
+    height: 5rem;
+    background-color: aliceblue;
+    font-size: 15px;
     font-weight: bold;
-    text-align: center;
-    background-color: burlywood;
-    border: 6px solid #4d2c02;
-    border-radius: 8px;
-    height: max-content;
-}
-#tittle{
-    display: flex;
-    justify-content: center;
-    background-color: burlywood;
-    border-radius: 10px;
-    border: 4px solid #4d2c02;
-    height: 2.5rem;
-}
-.quotecontainer{
+    border: 1px solid #03001C;
     p{
-        width: 34rem;
-        margin-top: 0.5rem;
+        text-align: center;
+        padding-left: 10px;
     }
-    display: flex;
-    justify-content: center;
-}
-.authorcontainer{
-    display: flex;
-    justify-content: end;
-    margin-top: 0.5rem;
-    .author{
-        margin-right: 2.6em;
-    }
-}
-.btncontainer{
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-    #btnload{
-        background-color: #4d2c02;
-        border-color: black;
-        color: white;
-        height: 3rem;
-        font-style: italic;
+    span{
+        order: 2;
+        align-self: flex-start;
+        padding-right: 5px;
+        padding-top: 5px;
         font-weight: bold;
-        font-size: 18px;
-        border-radius: 10px;
+        color: red;
+    }
+    span:hover{
         cursor: pointer;
     }
 }
-#btnload:hover{
-    background-color: #b1e0d0;
-    color: #4d2c02;
-    border: 3px solid black;
-    transition: 0.8s;
+#alert{
+    bottom: 100%;
 }
-
-//     #btnload{
-//         background-color: #4d2c02;
-//         border-color: #4d2c02;
-//         color: white;
-//         height: 3rem;
-//         font-style: italic;
-//         font-weight: bold;
-//         font-size: 18px;
-//         border-radius: 10px;
-//         margin-left: 15.5rem;
-//         margin-top: 1rem;
-//         cursor: pointer;
-//     }
-
-//     #btnload:hover{
-//         background-color: #b1e0d0;
-//         color: #4d2c02;
-//         border: 3px solid black;
-//         transition: 0.8s;
-//     }
-// }
-// .author{
-//     margin-right: 5rem;
-//     font-size: 23.5px;
-//     font-style: italic;
-//     font-weight: bold;
-//     text-align: end;
-//     color: #f73505;
-// }
