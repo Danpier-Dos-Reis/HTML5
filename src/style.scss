@@ -1,0 +1,66 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+*{
+    margin: 0;
+    font-family: "Cambria Math";
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url(src/pictures/background.png);
+    background-size: cover;
+}
+#tittle{
+    width: 25rem;
+    padding-left: 1rem;
+    background-color: burlywood;
+    margin: 8% 0 1rem 32%;
+    border-radius: 10px;border: 4px solid #4d2c02;
+}
+.quotecontainer{
+    background-color: burlywood;
+    border-radius: 20px;
+    width: 40rem;
+    height: 20rem;
+    margin: 0 0 0 13%;
+    padding-top: 2rem;
+    .quote{
+        width: 26rem;
+        font-size: 23.5px;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        margin: auto auto 1rem 6rem;
+    }
+    #btnload{
+        background-color: #4d2c02;
+        border-color: #4d2c02;
+        color: white;
+        height: 3rem;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-left: 15.5rem;
+        margin-top: 1rem;
+        cursor: pointer;
+    }
+
+    #btnload:hover{
+        background-color: #b1e0d0;
+        color: #4d2c02;
+        border: 3px solid black;
+        transition: 0.8s;
+    }
+}
+.author{
+    margin-right: 5rem;
+    font-size: 23.5px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: end;
+    color: #f73505;
+}

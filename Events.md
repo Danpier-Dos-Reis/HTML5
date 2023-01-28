@@ -8,7 +8,19 @@ Handling Events
     * Es el comportamiento por defecto de los eventos en la mayoría de los navegadores donde **un evento generado en un elemento interno se propaga hacia elementos externos**. Por ejemplo: **_un botón que cambie el background-color del su contenedor_**
 * descendente o **capturing**
     * Es un comportamiento menos común y se refiere a los casos donde un evento disparado por un elemento _padre_ o _externo_ afecta a un elemento _hijo_ o _interno_. Por ejemplo : **_al mouse estar sobre el contenedor se cambie el backgorund-color de algún botón dentro del contenedor_**
-
+## Funciones
+* _element_.**getAttribute("id")** : en este caso nos dará todos los ids que contenga el elemento.
+    * Ejemplo :
+    ```javascript
+    console.log(element.getAttribute("class") + " is CLICKED");
+    ```
+* _element_.**matches("li")** : en este caso valida si el elemento es una etiqueta **li**.
+     * Ejemplo : 
+     ```javascript
+     if (element.matches("li")) {
+        element.style.backgroundColor = "red";
+    }
+    ```
 # Notas
 1- Handling the proyect and solving how i can the object **HTMLElement** automaticlly tsc or vsCode they imported a library **_import { isThisTypeNode } from "typescript"_** and this generate errors in Brave-Browser
 
