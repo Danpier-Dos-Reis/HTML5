@@ -11,62 +11,81 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-image: url(src/pictures/background.png);
   background-size: cover;
+  background-image: url(src/pictures/background.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body main {
+  border-radius: 5px;
+  display: grid;
+  width: 70%;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 7rem);
 }
 
-#tittle {
-  width: 25rem;
-  padding-left: 1rem;
-  background-color: burlywood;
-  margin: 8% 0 1rem 32%;
-  border-radius: 10px;
-  border: 4px solid #4d2c02;
-}
-
-.quotecontainer {
-  background-color: burlywood;
-  border-radius: 20px;
-  width: 40rem;
-  height: 20rem;
-  margin: 0 0 0 13%;
-  padding-top: 2rem;
-}
-.quotecontainer .quote {
-  width: 26rem;
+section {
   font-size: 23.5px;
   font-style: italic;
   font-weight: bold;
   text-align: center;
-  margin: auto auto 1rem 6rem;
+  background-color: burlywood;
+  border: 6px solid #4d2c02;
+  border-radius: 8px;
+  height: max-content;
 }
-.quotecontainer #btnload {
+
+#tittle {
+  display: flex;
+  justify-content: center;
+  background-color: burlywood;
+  border-radius: 10px;
+  border: 4px solid #4d2c02;
+  height: 2.5rem;
+}
+
+.quotecontainer {
+  display: flex;
+  justify-content: center;
+}
+.quotecontainer p {
+  width: 34rem;
+  margin-top: 0.5rem;
+}
+
+.authorcontainer {
+  display: flex;
+  justify-content: end;
+  margin-top: 0.5rem;
+}
+.authorcontainer .author {
+  margin-right: 2.6em;
+}
+
+.btncontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.btncontainer #btnload {
   background-color: #4d2c02;
-  border-color: #4d2c02;
+  border-color: black;
   color: white;
   height: 3rem;
   font-style: italic;
   font-weight: bold;
   font-size: 18px;
   border-radius: 10px;
-  margin-left: 15.5rem;
-  margin-top: 1rem;
   cursor: pointer;
 }
-.quotecontainer #btnload:hover {
+
+#btnload:hover {
   background-color: #b1e0d0;
   color: #4d2c02;
   border: 3px solid black;
   transition: 0.8s;
-}
-
-.author {
-  margin-right: 5rem;
-  font-size: 23.5px;
-  font-style: italic;
-  font-weight: bold;
-  text-align: end;
-  color: #f73505;
 }
 
 /*# sourceMappingURL=style.css.map */
