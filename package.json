@@ -2,5 +2,26 @@
   "dependencies": {
     "sass": "^1.57.1",
     "typescript": "^4.9.4"
-  }
+  },
+  "name": "html5",
+  "description": "Initial Commit **_Free Code Camp Projects_**",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles" : "sass --watch ./src/style.scss style.css",
+    "type" : "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danpier-Dos-Reis/HTML5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danpier-Dos-Reis/HTML5/issues"
+  },
+  "homepage": "https://github.com/Danpier-Dos-Reis/HTML5#readme"
 }
