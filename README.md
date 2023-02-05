@@ -39,5 +39,6 @@ input:not([disabled]):not(.example){
 }
 ```
 * **~** : El selector "~" se conoce como el selector de hermano general. Se usa para seleccionar todos los elementos hermanos que siguen después de un elemento específico.
+* __.element > *__ : De esta forma podemos seleccionar a todos los **_hijos directos_** de un contenedor.
 ## JavaScript
-* **setInterval** : es una función que ejecutará la acción que le indiquemos en el tiempo que le indiquemos
+* **setInterval** : es una función que ejecutará la acción que le indiquemos en el tiempo que le indiquemos.
