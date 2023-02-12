@@ -1,158 +1,73 @@
-html {
-  height: 100%;
-}
-html body {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+@charset "UTF-8";
+/*
+body
+        slider
+                //imágenes
+            btncontainer
+                //Botónes
+*/
 * {
   margin: 0;
   padding: 0;
+  font-family: "Cambria Math";
 }
 
-section {
-  width: 75%;
-  height: 75%;
-  border: 4px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 4px;
+.container {
+  width: 100%;
+  height: 33rem;
+  display: inline-flex;
+  flex-direction: column-reverse;
 }
-
-section > * {
-  border: 2px solid darkblue;
-  width: 32%;
-  height: 40%;
+.container .slider {
+  width: inherit;
+  height: inherit;
   position: relative;
 }
 
-.image_one .image__img {
-  width: 100%;
-  height: 100%;
-}
-.image_one .image__overlay {
+.slider > div {
+  width: inherit;
+  height: inherit;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  font-family: "Quicksand", sans-serif;
+  opacity: 0;
+  transition: 0.5s;
+}
+.slider > div img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+
+.btncontainer {
+  margin: auto;
+  display: inline-flex;
+}
+.btncontainer div {
+  background-color: lightblue;
+  border: 2px dotted red;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 1s;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
 }
-.image_one .image__overlay--blur {
-  backdrop-filter: blur(5px);
+.btncontainer div a {
+  color: black;
+  font-size: large;
 }
-.image_one .image__overlay--primary {
-  background-color: #009578;
+
+.btncontainer div:not(:last-child) {
+  margin-right: 2rem;
 }
-.image_one .image__overlay > * {
-  transform: translateY(40px);
-  transition: transform 0.25s;
-}
-.image_one .image__overlay:hover {
+
+.slider div:first-child {
   opacity: 1;
 }
-.image_one .image__overlay:hover > * {
-  transform: translateY(0);
-}
-.image_one .image__title {
-  font-size: 2em;
-  font-weight: bold;
-}
-.image_one .image__description {
-  font-size: 1.25em;
-  margin-top: 0.25em;
-}
 
-.image_two .image__img {
-  width: 100%;
-  height: 100%;
-}
-.image_two .image__overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  font-family: "Quicksand", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 1s;
-}
-.image_two .image__overlay--blur {
-  backdrop-filter: blur(5px);
-}
-.image_two .image__overlay > * {
-  transform: translateY(20px);
-  transition: transform 0.25s;
-}
-.image_two .image__overlay:hover {
-  opacity: 0.8;
-}
-.image_two .image__overlay:hover > * {
-  transform: translateY(0);
-}
-.image_two .image__title {
-  font-size: 2em;
-  font-weight: bold;
-}
-.image_two .image__description {
-  font-size: 1.25em;
-  margin-top: 0.25em;
-}
-
-.image_three .image__img {
-  width: 100%;
-  height: 100%;
-}
-.image_three .image__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  font-family: "Quicksand", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 1s;
-}
-.image_three .image__overlay > * {
-  transform: translateY(-40px);
-  transition: transform 0.25s;
-}
-.image_three .image__overlay:hover {
-  opacity: 0.8;
-}
-.image_three .image__overlay:hover > * {
-  transform: translateY(0);
-}
-.image_three .image__title {
-  font-size: 2em;
-  font-weight: bold;
-}
-.image_three .image__description {
-  font-size: 1.25em;
-  margin-top: 0.25em;
+/*Cuando un elemento es seleccionado (los seleccionamos a traves del <a>) este cambia
+su opacidad a 1 y así se visualizará en pantalla*/
+.slider div:target {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

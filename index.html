@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Hover Text Effect with HTML & CSS</title>
+  <title>Slider Two</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <section class="maincontainer">
-    <!--first image Oculta Imagen Principal-->
-    <div class="image_one">
-      <img class="image__img" src="src/Pictures/littlesad.png" alt="Bricks">
-      <div class="image__overlay image__overlay--primary">
-        <div class="image__title">Bricks</div>
-        <p class="image__description">Here we have a brick wall.</p>
+  <main class="container">
+      <!--Imágenes-->
+      <div class="slider">
+        <div id="slide1">
+          <img src="imgs/Engranajes.png" alt="one">
+        </div>
+        <div id="slide2">
+          <img src="imgs/Fantasy.png" alt="two">
+        </div>
+        <div id="slide3">
+          <img src="imgs/Place.png" alt="three">
+        </div>
       </div>
-    </div>
-    <!--second image Oscurece y Modifica el brillo de la imagen-->
-    <div class="image_two">
-      <img class="image__img" src="src/Pictures/littlesad.png" alt="Bricks">
-      <div class="image__overlay image__overlay--primary image__overlay--blur">
-        <div class="image__title">Bricks</div>
-        <p class="image__description">Here we have a brick wall.</p>
+      <!--Botónes-->
+      <div class="btncontainer">
+        <div>
+          <a href="#slide1">1</a>
+        </div>
+        <div>
+          <a href="#slide2">2</a>
+        </div>
+        <div>
+          <a href="#slide3">3</a>
+        </div>
       </div>
-    </div>
-    <!--Third image solo oscurece-->
-    <div class="image_three">
-      <img class="image__img" src="src/Pictures/littlesad.png" alt="Bricks">
-      <div class="image__overlay image__overlay--primary image__overlay--blur">
-        <div class="image__title">Bricks</div>
-        <p class="image__description">Here we have a brick wall.</p>
-      </div>
-    </div>
-  </section>
+  </main>
 </body>
 
 </html>
