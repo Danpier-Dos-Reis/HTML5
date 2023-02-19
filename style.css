@@ -1,73 +1,100 @@
-@charset "UTF-8";
-/*
-body
-        slider
-                //imágenes
-            btncontainer
-                //Botónes
-*/
 * {
   margin: 0;
   padding: 0;
-  font-family: "Cambria Math";
+  font-family: "Georgia", "Times New Roman", "Times", "serif";
 }
 
-.container {
-  width: 100%;
-  height: 33rem;
-  display: inline-flex;
-  flex-direction: column-reverse;
+html {
+  height: 100%;
 }
-.container .slider {
-  width: inherit;
-  height: inherit;
+html body {
+  height: 100vh;
+  display: flex;
+  background: #23ade3;
+}
+
+main {
   position: relative;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+main .slides {
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+main .slides input {
+  display: none;
 }
 
-.slider > div {
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  opacity: 0;
-  transition: 0.5s;
+.slides div:not(:last-child) {
+  width: 20%;
+  transition: 1.5s;
 }
-.slider > div img {
-  width: inherit;
-  height: inherit;
+.slides div:not(:last-child) img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .btncontainer {
-  margin: auto;
-  display: inline-flex;
-}
-.btncontainer div {
-  background-color: lightblue;
-  border: 2px dotted red;
+  position: absolute;
+  bottom: 1rem;
   display: flex;
-  align-items: center;
+  width: 100%;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+}
+.btncontainer label {
+  padding: 1rem;
   border-radius: 100%;
+  border: 2px solid aquamarine;
+  cursor: pointer;
+  transition: 0.5s;
 }
-.btncontainer div a {
-  color: black;
-  font-size: large;
+.btncontainer label:hover {
+  background-color: lightcoral;
 }
-
-.btncontainer div:not(:last-child) {
-  margin-right: 2rem;
-}
-
-.slider div:first-child {
-  opacity: 1;
+.btncontainer label:not(:last-child) {
+  margin-right: 4%;
 }
 
-/*Cuando un elemento es seleccionado (los seleccionamos a traves del <a>) este cambia
-su opacidad a 1 y así se visualizará en pantalla*/
-.slider div:target {
-  opacity: 1;
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+.btnautomatics {
+  position: absolute;
+  bottom: 1rem;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+}
+.btnautomatics div {
+  padding: 1rem;
+  border-radius: 100%;
+  border: 2px solid white;
+  transition: 1s;
+}
+
+#radio1:checked ~ .btnautomatics .btn_auto1 {
+  background-color: lightseagreen;
+}
+
+#radio2:checked ~ .btnautomatics .btn_auto2 {
+  background-color: lightseagreen;
+}
+
+#radio3:checked ~ .btnautomatics .btn_auto3 {
+  background-color: lightseagreen;
 }
 
 /*# sourceMappingURL=style.css.map */

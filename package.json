@@ -1,0 +1,24 @@
+{
+  "name": "html5",
+  "version": "1.0.0",
+  "description": "Hello World\r ## HTML\r * **for** : El atributo \"for\" se usa en los elementos \"label\" para hacer referencia a un\r   control/elemento asociado en el documento.\r     * En este caso, cada etiqueta \"label\" está haciendo referencia a un input específico (radio1, radio2, etc) mediante\r   su id, permitiendo que al hacer click en la etiqueta \"label\" se seleccione o deseleccione el input correspondiente.\r ```HTML\r <!--radio buttons start-->\r <input type=\"radio\" name=\"radio-btn\" id=\"radio1\">\r <input type=\"radio\" name=\"radio-btn\" id=\"radio2\">\r <input type=\"radio\" name=\"radio-btn\" id=\"radio3\">\r <input type=\"radio\" name=\"radio-btn\" id=\"radio4\">\r <!--radio buttons end-->\r <!--manual navigation start-->\r <div class=\"navigation-manual\">\r   <label for=\"radio1\" class=\"manual-btn\"></label>\r   <label for=\"radio2\" class=\"manual-btn\"></label>\r   <label for=\"radio3\" class=\"manual-btn\"></label>\r   <label for=\"radio4\" class=\"manual-btn\"></label>\r </div>\r <!--manual navigation end-->\r ```\r ## CSS\r * **:not** _pseudo-selector_ : Aplica estilos a elementos que no posean ciertos atributos.\r ```HTML\r <form>\r  <!--Phone:--> <input type=\"tel\" class=\"example\">\r  <!--E-mail:--> <input type=\"email\" disabled=\"disabled\">\r  <!--Password:--> <input type=\"password\">\r </form>\r ```\r ```CSS\r /*CSS*/\r input:not([disabled]):not(.example){\r /*Solo se aplican los estilos a Password porque no posee el atributo ni la clase \".example\"*/\r  background-color: #ccc;\r }\r ```\r * **~** : El selector \"~\" se conoce como el selector de hermano general. Se usa para seleccionar todos los elementos hermanos que siguen después de un elemento específico.\r * __.element > *__ : De esta forma podemos seleccionar a todos los **_hijos directos_** de un contenedor.\r ## JavaScript\r * **setInterval** : es una función que ejecutará la acción que le indiquemos en el tiempo que le indiquemos.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles":"sass --watch style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danpier-Dos-Reis/HTML5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danpier-Dos-Reis/HTML5/issues"
+  },
+  "homepage": "https://github.com/Danpier-Dos-Reis/HTML5#readme",
+  "dependencies": {
+    "sass": "^1.58.0"
+  }
+}

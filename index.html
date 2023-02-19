@@ -4,37 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slider Two</title>
+  <title>Slider Three</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
   <main class="container">
-      <!--Imágenes-->
-      <div class="slider">
-        <div id="slide1">
-          <img src="imgs/Engranajes.png" alt="one">
-        </div>
-        <div id="slide2">
-          <img src="imgs/Fantasy.png" alt="two">
-        </div>
-        <div id="slide3">
-          <img src="imgs/Place.png" alt="three">
-        </div>
+    <section class="slides">
+      <!--Inputs-->
+      <input type="radio" name="radio_btn" id="radio1">
+      <input type="radio" name="radio_btn" id="radio2">
+      <input type="radio" name="radio_btn" id="radio3">
+      <!--Inputs-->
+      <!--images-->
+      <div class="slide first">
+        <img src="imgs/Engranajes.png" alt="Engranajes">
       </div>
-      <!--Botónes-->
-      <div class="btncontainer">
-        <div>
-          <a href="#slide1">1</a>
-        </div>
-        <div>
-          <a href="#slide2">2</a>
-        </div>
-        <div>
-          <a href="#slide3">3</a>
-        </div>
+      <div class="slide">
+        <img src="imgs/Fantasy.png" alt="Space">
       </div>
+      <div class="slide">
+        <img src="imgs/Place.png" alt="Lugares">
+      </div>
+      <!--images-->
+      <!--Automatic Buttons-->
+      <div class="btnautomatics">
+        <div class="btn_auto1"></div>
+        <div class="btn_auto2"></div>
+        <div class="btn_auto3"></div>
+      </div>
+      <!--Automatic Buttons-->
+    </section>
+    <section class="btncontainer">
+      <!--Manual Buttons-->
+        <label for="radio1" class="btn_manual1"></label>
+        <label for="radio2" class="btn_manual2"></label>
+        <label for="radio3" class="btn_manual3"></label>
+      <!--Manual Buttons-->
+    </section>
   </main>
 </body>
 
