@@ -1,49 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slider Three</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <main class="container">
-    <section class="slides">
-      <!--Inputs-->
-      <input type="radio" name="radio_btn" id="radio1">
-      <input type="radio" name="radio_btn" id="radio2">
-      <input type="radio" name="radio_btn" id="radio3">
-      <!--Inputs-->
-      <!--images-->
-      <div class="slide first">
-        <img src="imgs/Engranajes.png" alt="Engranajes">
-      </div>
-      <div class="slide">
-        <img src="imgs/Fantasy.png" alt="Space">
-      </div>
-      <div class="slide">
-        <img src="imgs/Place.png" alt="Lugares">
-      </div>
-      <!--images-->
-      <!--Automatic Buttons-->
-      <div class="btnautomatics">
-        <div class="btn_auto1"></div>
-        <div class="btn_auto2"></div>
-        <div class="btn_auto3"></div>
-      </div>
-      <!--Automatic Buttons-->
-    </section>
-    <section class="btncontainer">
-      <!--Manual Buttons-->
-        <label for="radio1" class="btn_manual1"></label>
-        <label for="radio2" class="btn_manual2"></label>
-        <label for="radio3" class="btn_manual3"></label>
-      <!--Manual Buttons-->
-    </section>
-  </main>
-</body>
 
+    <div class="swiper mySwiper container">
+        <div class="swiper-wrapper">
+    
+            <div class="swiper-slide">
+                <div class="swiper-text">
+                    <h3>TTILE</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <img src="https://cdn.pixabay.com/photo/2014/09/10/00/59/mountains-440520_1280.jpg" alt="imagen">
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-text">
+                    <h3>TTILE</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <img src="https://cdn.pixabay.com/photo/2019/08/28/12/20/fog-4436636_960_720.jpg 1x, https://cdn.pixabay.com/photo/2019/08/28/12/20/fog-4436636_1280.jpg" alt="imagen">
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-text">
+                    <h3>TTILE</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <img src="https://cdn.pixabay.com/photo/2013/06/12/22/20/mountains-139012_960_720.jpg 1x, https://cdn.pixabay.com/photo/2013/06/12/22/20/mountains-139012_1280.jpg" alt="imagen">
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-text">
+                    <h3>TTILE</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <img src="https://cdn.pixabay.com/photo/2016/08/27/14/38/mountains-1624284_960_720.jpg 1x, https://cdn.pixabay.com/photo/2016/08/27/14/38/mountains-1624284_1280.jpg" alt="imagen">
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-text">
+                    <h3>TTILE</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <img src="https://cdn.pixabay.com/photo/2017/05/10/15/05/himalayas-2301040_960_720.jpg 1x, https://cdn.pixabay.com/photo/2017/05/10/15/05/himalayas-2301040_1280.jpg" alt="imagen">
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-text">
+                    <h3>TTILE</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <img src="https://cdn.pixabay.com/photo/2017/10/28/14/56/dolomites-2897227_960_720.jpg 1x, https://cdn.pixabay.com/photo/2017/10/28/14/56/dolomites-2897227_1280.jpg" alt="imagen">
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-text">
+                    <h3>TTILE</h3>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <img src="https://cdn.pixabay.com/photo/2014/09/10/00/59/mountains-440520_1280.jpg" alt="imagen">
+            </div>
+    
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js" ></script>
+</body>
 </html>

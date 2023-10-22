@@ -1,100 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Georgia", "Times New Roman", "Times", "serif";
+*{
+    margin: 0; padding: 0;
 }
 
-html {
-  height: 100%;
-}
-html body {
-  height: 100vh;
-  display: flex;
-  background: #23ade3;
-}
-
-main {
-  position: relative;
-  width: 100%;
-  height: 50%;
-  overflow: hidden;
-}
-main .slides {
-  width: 500%;
-  height: 100%;
-  display: flex;
-}
-main .slides input {
-  display: none;
+body{
+    background-color: linear-gradient(
+        180deg,
+        rgba(204,204,204,1) 0%,
+        rgba(238,238,238,1) 50%,
+        rgba(204,204,204,1) 100%
+    );
+    font-family: "Cambria Math";
+    min-height: 50vh;
 }
 
-.slides div:not(:last-child) {
-  width: 20%;
-  transition: 1.5s;
-}
-.slides div:not(:last-child) img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.container{
+    max-width: 250px;
+    margin: 0 auto;
 }
 
-.btncontainer {
-  position: absolute;
-  bottom: 1rem;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-.btncontainer label {
-  padding: 1rem;
-  border-radius: 100%;
-  border: 2px solid aquamarine;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.btncontainer label:hover {
-  background-color: lightcoral;
-}
-.btncontainer label:not(:last-child) {
-  margin-right: 4%;
+.swiper{ margin-top: 40px;}
+
+.swiper-slide{
+    margin-bottom: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 0 30px 30px rgba(0,0,0,1);
+    border-radius: 15px;
+    height: 420px;
+    width: 295px;
+    position: relative;
 }
 
-#radio1:checked ~ .first {
-  margin-left: 0;
+.swiper-slide img{
+    width: 295px;
+    border-radius: 15px;
+    height: 420px;
 }
 
-#radio2:checked ~ .first {
-  margin-left: -20%;
+.swiper-text{
+    position: absolute;
+    padding: 25px;
 }
 
-#radio3:checked ~ .first {
-  margin-left: -40%;
+.swiper-text h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #222222;
 }
 
-.btnautomatics {
-  position: absolute;
-  bottom: 1rem;
-  display: inline-flex;
-  width: 100%;
-  justify-content: center;
+.swiper-wrapper{
+    position: fixed;
+    width: 80%;
 }
-.btnautomatics div {
-  padding: 1rem;
-  border-radius: 100%;
-  border: 2px solid white;
-  transition: 1s;
-}
-
-#radio1:checked ~ .btnautomatics .btn_auto1 {
-  background-color: lightseagreen;
-}
-
-#radio2:checked ~ .btnautomatics .btn_auto2 {
-  background-color: lightseagreen;
-}
-
-#radio3:checked ~ .btnautomatics .btn_auto3 {
-  background-color: lightseagreen;
-}
-
-/*# sourceMappingURL=style.css.map */
